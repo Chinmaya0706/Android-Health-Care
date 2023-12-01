@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                         SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("username",username);
+                        editor.putString("password",password);
                         editor.apply();
                         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                         finish();
