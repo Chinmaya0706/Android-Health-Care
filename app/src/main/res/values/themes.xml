@@ -7,4 +7,9 @@
         <item name="android:statusBarColor">@color/purple_500</item>
     </style>
     <style name="Theme.HealthCare" parent="Base.Theme.HealthCare" />
+    <style name="AppTheme.HomeActivity" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
 </resources>

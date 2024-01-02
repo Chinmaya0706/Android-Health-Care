@@ -13,68 +13,69 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
         android:text="Health Care"
-        android:textColor="@color/colorWhite"
-        android:textSize="30sp" />
+        android:textColor="@color/purple_200"
+        android:textSize="@dimen/_30ssp" />
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/titleHome"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:columnCount="2"
         android:rowCount="3">
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardLabTest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_140sdp"
             android:layout_row="0"
             android:layout_column="0"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
             android:layout_gravity="fill"
             app:cardBackgroundColor="@color/teal_200"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_8sdp"
             app:cardUseCompatPadding="true">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/home"/>
+                    android:src="@drawable/home" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="LAB TEST"
                     android:textAlignment="center"
                     android:textColor="@color/colorRed"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardBuyMedicine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_140sdp"
             android:layout_row="0"
             android:layout_column="1"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
             android:layout_gravity="fill"
             app:cardBackgroundColor="@color/teal_200"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_8sdp"
             app:cardUseCompatPadding="true">
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -97,16 +98,14 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardFindDoctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_150sdp"
             android:layout_row="1"
             android:layout_column="0"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
             android:layout_gravity="fill"
             app:cardBackgroundColor="@color/teal_200"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_8sdp"
             app:cardUseCompatPadding="true">
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -129,16 +128,14 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardHealthDoctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_140sdp"
             android:layout_row="1"
             android:layout_column="1"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
             android:layout_gravity="fill"
             app:cardBackgroundColor="@color/teal_200"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_8sdp"
             app:cardUseCompatPadding="true">
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -161,16 +158,14 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardOrderDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_140sdp"
             android:layout_row="2"
             android:layout_column="0"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
             android:layout_gravity="fill"
             app:cardBackgroundColor="@color/teal_200"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_8sdp"
             app:cardUseCompatPadding="true">
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -193,16 +188,14 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_130sdp"
             android:layout_row="2"
             android:layout_column="1"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
             android:layout_gravity="fill"
             app:cardBackgroundColor="@color/teal_200"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_8sdp"
             app:cardUseCompatPadding="true">
             <LinearLayout
                 android:layout_width="wrap_content"

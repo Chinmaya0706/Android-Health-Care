@@ -45,11 +45,12 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putString("username",username);
                         editor.putString("password",password);
                         editor.apply();
-                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        startActivity(intent);
                         finish();
                     }
                     else{
-                        Toast.makeText(getApplicationContext(),"Invalid Username and Password",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Invalid Login details",Toast.LENGTH_SHORT).show();
                     }
 
                 }

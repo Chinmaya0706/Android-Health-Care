@@ -13,23 +13,27 @@
         android:theme="@style/Theme.HealthCare"
         tools:targetApi="31">
         <activity
-            android:name=".DoctorDetailsActivity"
+            android:name=".LabTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookAppointmentActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".HomeActivity"
             android:exported="true">
+
         </activity>
         <activity
+            android:name=".DoctorDetailsActivity"
+            android:exported="true"></activity>
+        <activity
             android:name=".FindDoctorActivity"
-            android:exported="false" />
+            android:exported="true"></activity>
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".splashScreen"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,8 +42,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="false" />
     </application>
 
 </manifest>
