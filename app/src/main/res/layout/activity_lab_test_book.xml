@@ -8,7 +8,7 @@
     tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/editTextRegUsername"
+        android:id="@+id/editTextLabtTestBookFullName"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_40sdp"
         android:background="@drawable/input_bg"
@@ -16,7 +16,7 @@
         android:drawablePadding="@dimen/_10sdp"
         android:elevation="@dimen/_10sdp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Full Name"
         android:inputType="text"
         android:paddingLeft="@dimen/_20sdp"
         android:paddingTop="@dimen/_10sdp"
@@ -25,15 +25,15 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
         android:textSize="@dimen/_15ssp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextRegEmail"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.889" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewLabTestBook"
+        app:layout_constraintVertical_bias="0.202" />
 
     <EditText
-        android:id="@+id/editTextRegEmail"
+        android:id="@+id/editTextLabTestBookAddres"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_margin="@dimen/_18sdp"
@@ -42,7 +42,7 @@
         android:drawablePadding="@dimen/_10sdp"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="E-mail"
+        android:hint="Address"
         android:inputType="textEmailAddress"
         android:paddingLeft="@dimen/_20sdp"
         android:paddingTop="@dimen/_10sdp"
@@ -51,23 +51,23 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
         android:textSize="@dimen/_15ssp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextRegPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLabtTestBookFullName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextRegPassword"
+        android:id="@+id/editTextLabTestBookPincode"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_40sdp"
         android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="@dimen/_10sdp"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Pincode"
         android:inputType="textPassword"
         android:paddingLeft="@dimen/_20sdp"
         android:paddingTop="@dimen/_10sdp"
@@ -76,23 +76,23 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
         android:textSize="@dimen/_15ssp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextRegConfirmPassword2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.929" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLabTestBookAddres"
+        app:layout_constraintVertical_bias="0.066" />
 
     <EditText
-        android:id="@+id/editTextRegConfirmPassword2"
+        android:id="@+id/editTextLabTestBookContactNumber"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_40sdp"
         android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="@dimen/_10sdp"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="Confirm Password"
+        android:hint="Contact Number"
         android:inputType="textPassword"
         android:paddingLeft="@dimen/_20sdp"
         android:paddingTop="@dimen/_10sdp"
@@ -101,12 +101,12 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
         android:textSize="@dimen/_15ssp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonRegister"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.924" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLabTestBookPincode"
+        app:layout_constraintVertical_bias="0.081" />
 
     <TextView
         android:id="@+id/textView"
@@ -125,25 +125,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.008" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottiAnim"
-        android:layout_width="182dp"
-        android:layout_height="151dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toTopOf="@+id/editTextRegEmail"
+    <TextView
+        android:id="@+id/textViewLabTestBook"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Fill All Details for Booking"
+        android:textSize="25sp"
+        android:textColor="@color/yelloLight"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.271" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.078" />
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonLabTestBook"
         android:layout_width="@dimen/_260sdp"
         android:layout_height="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_18sdp"
         android:backgroundTint="#0337F4"
         android:elevation="10dp"
-        android:text="Register"
+        android:text="Book"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/_18ssp"
         android:textStyle="bold"
@@ -151,44 +155,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721" />
-
-    <TextView
-        android:id="@+id/already_registered"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/_35sdp"
-        android:layout_marginTop="60dp"
-        android:gravity="center"
-        android:text="Already Registered ?"
-        android:textColor="@color/colorWhite"
-        android:textSize="@dimen/_15ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/RegLoginbtn"
-        android:layout_width="@dimen/_140sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:background="@android:color/transparent"
-        android:backgroundTint="@color/purple_500"
-        android:gravity="center"
-        android:padding="0dp"
-        android:text="Login"
-        android:textColor="@color/purple_500"
-        android:textSize="@dimen/_20ssp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toEndOf="@+id/already_registered"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLabTestBookContactNumber"
+        app:layout_constraintVertical_bias="0.132" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

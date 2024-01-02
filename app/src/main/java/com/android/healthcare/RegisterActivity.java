@@ -36,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                register.setElevation(20.0f);
                 String username = edUsername.getText().toString();
                 String email = edEmail.getText().toString();
                 String password = edPassword.getText().toString();
@@ -67,6 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                login.setElevation(20.0f);
                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
                 finish();
             }

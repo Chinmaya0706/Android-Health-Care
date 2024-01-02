@@ -18,6 +18,7 @@ public class FindDoctorActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                back.setElevation(20.0f);
                 startActivity(new Intent(FindDoctorActivity.this,HomeActivity.class));
                 finish();
             }
@@ -26,6 +27,7 @@ public class FindDoctorActivity extends AppCompatActivity {
         familyphysician.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                familyphysician.setElevation(20.0f);
                 Intent it = new Intent(FindDoctorActivity.this,DoctorDetailsActivity.class);
                 it.putExtra("title","Family Physicians");
                 startActivity(it);
@@ -35,6 +37,7 @@ public class FindDoctorActivity extends AppCompatActivity {
         dietician.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dietician.setElevation(20.0f);
                 Intent intent = new Intent(FindDoctorActivity.this,DoctorDetailsActivity.class);
                 intent.putExtra("title","Dietician");
                 startActivity(intent);
@@ -44,6 +47,7 @@ public class FindDoctorActivity extends AppCompatActivity {
         dentist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dentist.setElevation(20.0f);
                 Intent intent = new Intent(FindDoctorActivity.this,DoctorDetailsActivity.class);
                 intent.putExtra("title","Dentist");
                 startActivity(intent);
@@ -53,6 +57,7 @@ public class FindDoctorActivity extends AppCompatActivity {
         surgeon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                surgeon.setElevation(20.0f);
                 Intent intent = new Intent(FindDoctorActivity.this,DoctorDetailsActivity.class);
                 intent.putExtra("title","Surgeon");
                 startActivity(intent);
@@ -62,6 +67,7 @@ public class FindDoctorActivity extends AppCompatActivity {
         cardiologist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                cardiologist.setElevation(20.0f);
                 Intent intent = new Intent(FindDoctorActivity.this,DoctorDetailsActivity.class);
                 intent.putExtra("title","Cardiologist");
                 startActivity(intent);

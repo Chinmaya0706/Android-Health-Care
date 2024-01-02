@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
+                btn.setElevation(20.0f);
                 Database db = new Database(getApplicationContext(),"users",null,1);
                 if(username.length()==0 || password.length()==0){
                     Toast.makeText(getApplicationContext(),"Please Enter Login details",Toast.LENGTH_SHORT).show();
@@ -45,11 +46,12 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putString("username",username);
                         editor.putString("password",password);
                         editor.apply();
-                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        startActivity(intent);
                         finish();
                     }
                     else{
-                        Toast.makeText(getApplicationContext(),"Invalid Username and Password",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Invalid Login details",Toast.LENGTH_SHORT).show();
                     }
 
                 }
@@ -59,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                reg.setElevation(20.0f);
                 Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
                 startActivity(intent);
                 finish();
