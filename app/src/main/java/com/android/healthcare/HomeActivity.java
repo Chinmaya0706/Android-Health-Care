@@ -24,7 +24,6 @@ public class HomeActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logout.setElevation(20.0f);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.clear();
                 editor.apply();
@@ -38,7 +37,6 @@ public class HomeActivity extends AppCompatActivity {
         findDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findDoctor.setElevation(20.0f);
                 startActivity(new Intent(HomeActivity.this,FindDoctorActivity.class));
             }
         });
@@ -46,7 +44,6 @@ public class HomeActivity extends AppCompatActivity {
         labtest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                labtest.setElevation(20.0f);
                 startActivity(new Intent(getApplicationContext(),LabTestActivity.class));
             }
         });
