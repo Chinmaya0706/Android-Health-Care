@@ -73,7 +73,6 @@ public class DoctorDetailsActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                back.setElevation(20.0f);
                 startActivity(new Intent(DoctorDetailsActivity.this,FindDoctorActivity.class));
                 finish();
             }

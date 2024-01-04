@@ -58,31 +58,28 @@ public class BookAppointmentActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                back.setElevation(20.0f);
-                startActivity(new Intent(BookAppointmentActivity.this,FindDoctorActivity.class));
+                startActivity(new Intent(BookAppointmentActivity.this,DoctorDetailsActivity.class));
             }
         });
 
         bookAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bookAppointment.setElevation(20.0f);
+
             }
         });
 
-
+        initDatePicker();
         dateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                initDatePicker();
                 datePickerDialog.show();
             }
         });
-
+        initTimePicker();
         timeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                initTimePicker();
                 timePickerDialog.show();
             }
         });
