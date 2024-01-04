@@ -45,21 +45,24 @@ public class CartLabActivity extends AppCompatActivity {
         lst = findViewById(R.id.listviewCart);
         SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("username","").toString();
-        Database db = new Database(getApplicationContext(),"cart",null,1);
+        Database db = new Database(getApplicationContext(),"healthcare",null,1);
         float totalAmount = 0;
-        ArrayList dbData = db.getCartData(username,"lab");
+        ArrayList dbData = db.getCartData(username, "lab");
         packages = new String[dbData.size()][];
-        for(int i = 0;i<packages.length;i++){
-            packages[i] = new String[5];
+
+        if (!dbData.isEmpty()) {
+            for (int i = 0; i < dbData.size(); i++) {
+                packages[i] = new String[5];
+                String arrData = dbData.get(i).toString();
+                String[] strData = arrData.split(java.util.regex.Pattern.quote(":"));
+                packages[i][0] = strData[0];
+                packages[i][4] = "Cost : " + strData[1] + "/-";
+                totalAmount = totalAmount + Float.parseFloat(strData[1]);
+
+            }
+            tvTotal.setText("Total Cost : "+totalAmount);
         }
-        for(int i = 0;i<dbData.size();i++){
-            String arrData = dbData.get(i).toString();
-            String[] strData = arrData.split(java.util.regex.Pattern.quote("$"));
-            packages[i][0] = strData[0];
-            packages[i][4] = "Cost : "+strData[1]+"/-";
-            totalAmount = totalAmount + Float.parseFloat(strData[1]);
-        }
-        tvTotal.setText("Total Cost : "+totalAmount);
+
         list = new ArrayList();
         for(int i =0;i<packages.length;i++){
             item = new HashMap<String,String>();
@@ -79,10 +82,10 @@ public class CartLabActivity extends AppCompatActivity {
         checkOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getApplicationContext(),LabTestBookActivity.class);
-                it.putExtra("price",tvTotal.toString());
-                it.putExtra("date",dateButton.toString());
-                it.putExtra("time",timeButton.toString());
+                Intent it = new Intent(CartLabActivity.this,LabTestBookActivity.class);
+                it.putExtra("price", tvTotal.getText().toString());
+                it.putExtra("date", dateButton.getText().toString());
+                it.putExtra("time", timeButton.getText().toString());
                 startActivity(it);
             }
         });

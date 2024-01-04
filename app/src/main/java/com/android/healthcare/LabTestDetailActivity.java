@@ -46,7 +46,7 @@ public class LabTestDetailActivity extends AppCompatActivity {
                 String username = sharedPreferences.getString("username","");
                 String product = tvPackageName.getText().toString();
                 float price = Float.parseFloat(intent.getStringExtra("text3").toString());
-                Database db = new Database(getApplicationContext(),"cart",null,1);
+                Database db = new Database(getApplicationContext(),"healthcare",null,1);
                 if(db.checkCartItem(username,product)==1) Toast.makeText(getApplicationContext(),"Already exists in the cart",Toast.LENGTH_SHORT).show();
                 else{
                     db.addToCart(username,product,price,"lab");

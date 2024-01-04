@@ -94,7 +94,7 @@ public class Database extends SQLiteOpenHelper {
             do{
                 String product = c.getString(1);
                 String price = c.getString(2);
-                arr.add(product+"$"+price);
+                arr.add(product+":"+price);
             }while(c.moveToNext());
 
         }

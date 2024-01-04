@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = edEmail.getText().toString();
                 String password = edPassword.getText().toString();
                 String confirm_password = edConfirm.getText().toString();
-                Database db = new Database(getApplicationContext(),"users",null,1);
+                Database db = new Database(getApplicationContext(),"healthcare",null,1);
                 int email_length = email.length();
                 if(username.length()==0 || email.length()==0 || password.length()==0 || confirm_password.length()==0){
                     Toast.makeText(getApplicationContext(),"Please Enter all valid details",Toast.LENGTH_SHORT).show();

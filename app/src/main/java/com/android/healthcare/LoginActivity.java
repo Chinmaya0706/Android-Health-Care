@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
                 btn.setElevation(20.0f);
-                Database db = new Database(getApplicationContext(),"users",null,1);
+                Database db = new Database(getApplicationContext(),"healthcare",null,1);
                 if(username.length()==0 || password.length()==0){
                     Toast.makeText(getApplicationContext(),"Please Enter Login details",Toast.LENGTH_SHORT).show();
                     edUsername.setText("");
